@@ -1,10 +1,33 @@
+import java.util.Scanner;
+
 /**
  * first
  */
 public class first {
     public static void main(String[] args) {
 
-        int rs=PerfectN(8128,0,1);
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("请输入待判定的数:");
+        int InputNmuber=scanner.nextInt();
+
+        int rs=PerfectN(InputNmuber,0,1);
+
+        switch (rs) {
+            case -1:
+                System.out.println("输入数字超过10000,错误");
+                break;
+        
+            case 0:
+                System.out.println("该数不是完数！");
+                break;
+
+            case 1:
+                System.out.println("该数是完数！");
+                break;
+            default:
+                break;
+        }
+
         System.out.println(rs);
         
     }
@@ -43,10 +66,11 @@ public class first {
             return 1;
         }
         
-        //大酒店附近
+        //如果i不是n的因数则i++;进入下一层递归
         i++;
         rs=PerfectN(n, sum, i);
         
+        //最后返回rs或者向上层返回rs结果
         return rs;
     }
 }
