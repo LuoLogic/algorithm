@@ -43,7 +43,7 @@ public class first {
             return 1;
         }
         
-        //
+        //大酒店附近
         i++;
         rs=PerfectN(n, sum, i);
         
