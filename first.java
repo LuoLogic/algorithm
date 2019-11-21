@@ -21,21 +21,29 @@ public class first {
         }
 
 
+        //如果sum==n,则判断该数是完数，返回1
         if(sum==n){
             return 1;
         }
 
+
         int rs=-2;
+        //判断i是否可以被n整除
         if(n%i==0){
+            //可以整除则将sum加上i
             sum+=i;
+            //i自增1进入下一次递归
             i++;
+            //令rs接受下层递归返回值
             rs=PerfectN(n, sum, i);
         }
 
+        //如果下层返回的rs==1,则该数n为完数，向上返回1
         if(rs==1){
             return 1;
         }
         
+        //
         i++;
         rs=PerfectN(n, sum, i);
         
