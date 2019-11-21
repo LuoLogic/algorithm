@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - second",
+            "request": "launch",
+            "mainClass": "second",
+            "projectName": "算法上机_72ed107d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - first",
+            "request": "launch",
+            "mainClass": "first",
+            "projectName": "算法上机_72ed107d"
+        }
+    ]
+}
