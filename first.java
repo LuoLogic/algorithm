@@ -65,6 +65,11 @@ public class first {
         if(rs==1){
             return 1;
         }
+
+        //如果下层返回的rs==0,则该数n不是完数，向上返回0
+        if(rs==0){
+            return 0;
+        }
         
         //如果i不是n的因数则i++;进入下一层递归
         i++;
