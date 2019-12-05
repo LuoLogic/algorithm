@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - third",
+            "request": "launch",
+            "mainClass": "third",
+            "projectName": "算法上机_72ed107d"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - second",
             "request": "launch",
             "mainClass": "second",
