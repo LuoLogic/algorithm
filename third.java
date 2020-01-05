@@ -23,8 +23,9 @@ public class third {
         }
 
         //传入函数返回 结果数组
-        float result[]=bag(values, weights,bagWeight);
-        System.out.println("结果:"+Arrays.toString(result));
+        // float result[]=bag(values, weights,bagWeight);
+        // System.out.println("结果:"+Arrays.toString(result));
+        bag1(values, weights, bagWeight);
 
     }
 
@@ -133,5 +134,53 @@ public class third {
         return result;
     }
 
+    public  static void bag1(int[] values,int[] weights,float bagWeight){
+        bubblesort(values,weights);
+        System.out.println(Arrays.toString(weights));
+        
+        float[] x=new float[weights.length];
+        for (int i = 0; i < x.length; i++) {
+           x[i]=0; 
+        }
 
+        float c=bagWeight;
+        int i;
+        for(i=0;i<=values.length;i++){
+            if(weights[i]>c) break;
+            x[i]=1;
+            c-=weights[i];
+        }
+
+        if(i<=values.length){
+            x[i]=c/weights[i];
+        }
+
+        System.out.println(Arrays.toString(x));
+
+    }
+
+    public static void bubblesort(int[] values,int[] weights){
+        float[] vpw=new float[values.length];
+
+        for(int i=0;i<=values.length-1;i++){
+            vpw[i]=(float)values[i]/weights[i];
+        }
+
+        for(int i=0;i<values.length-1;i++){
+            for(int j=0;j<values.length-1;j++){
+                if(vpw[j]<vpw[j+1]){
+
+                    float temp=vpw[j];
+                    vpw[j]=vpw[j+1];
+                    vpw[j+1]=temp;
+
+                    int temp1=weights[j];
+                    weights[j]=weights[j+1];
+                    weights[j+1]=temp1;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(vpw));
+    }
 }

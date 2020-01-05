@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - quicksort",
+            "request": "launch",
+            "mainClass": "quicksort",
+            "projectName": "算法上机_72ed107d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - forth",
+            "request": "launch",
+            "mainClass": "forth",
+            "projectName": "算法上机_72ed107d"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - third",
             "request": "launch",
             "mainClass": "third",

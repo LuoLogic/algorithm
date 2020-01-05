@@ -55,23 +55,9 @@ public class first {
         if(n%i==0){
             //可以整除则将sum加上i
             sum+=i;
-            //i自增1进入下一次递归
-            i++;
-            //令rs接受下层递归返回值
-            rs=PerfectN(n, sum, i);
         }
 
-        //如果下层返回的rs==1,则该数n为完数，向上返回1
-        if(rs==1){
-            return 1;
-        }
-
-        //如果下层返回的rs==0,则该数n不是完数，向上返回0
-        if(rs==0){
-            return 0;
-        }
-        
-        //如果i不是n的因数则i++;进入下一层递归
+        //进入下一次递归
         i++;
         rs=PerfectN(n, sum, i);
         
